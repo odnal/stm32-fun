@@ -4,7 +4,7 @@
 
 // this info can be found using the data sheet
 #define SRAM_START 0x20000000U
-#define SRAM_SIZE (128*1024) // 128KB - note sram1 = 96KB and sram2 = 32KB
+#define SRAM_SIZE (96*1024) // 128KB - note sram1 = 96KB and sram2 = 32KB
 #define SRAM_END ((SRAM_START) + (SRAM_SIZE))
 
 #define STACK_START SRAM_END // after sram is done with start up, apply stack in front of sram for data

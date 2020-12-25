@@ -3,7 +3,7 @@ ENTRY(reset_handler)
 MEMORY
 {
     rom (rw) : ORIGIN = 0x08000000, LENGTH = 1024K
-    ram (rwx) : ORIGIN = 0x20000000, LENGTH = 128K
+    ram (rwx) : ORIGIN = 0x20000000, LENGTH = 96K
 }
 
 /* symbol declaration */
@@ -28,6 +28,7 @@ SECTIONS
     { 
         _sdata = .; /* assign value to symbol 'start_of_data' note. location counter always = vma */
         *(.data) 
+        . = ALIGN(4);
         _edata = .; /* end of data */
     } > ram AT> rom
 
@@ -35,6 +36,7 @@ SECTIONS
     { 
         _sbss = .;
         *(.bss) 
+        . = ALIGN(4);
         _ebss = .;
     } > ram
 }
