@@ -77,7 +77,7 @@ void L2(void) {
 }
 
 // GPIOA5
-void O (void) {
+void O(void) {
     for(int i=0; i<3; i++) {
         GPIOA_BSRR = 1<<(5+0);
         for(unsigned int i=0; i<0x40000; i++);
