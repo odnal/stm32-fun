@@ -100,12 +100,6 @@ int main(void) {
     tmp |= ((1<<(0<<1)));
     GPIOA_MODER = tmp;
 
-    // GPIOA1
-    tmp = GPIOA_MODER;
-    tmp &= (~(3<<(1<<1)));
-    tmp |= ((1<<(1<<1)));
-    GPIOA_MODER = tmp;
-
     // GPIOA5
     tmp = GPIOA_MODER;
     tmp &= (~(3<<(5<<1)));
